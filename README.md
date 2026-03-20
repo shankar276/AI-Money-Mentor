@@ -23,10 +23,16 @@ An intelligent, proactive mentor that understands your complete financial pictur
    A fast, frictionless 5-minute flow that maps your current net worth, income, debt, and risk profile.
 2. **Comprehensive Wellness Dashboard**
    Displays your financial health across 6 critical dimensions: Emergency Fund, Insurance Coverage, Debt Health, Investments, Tax Efficiency, and Retirement Readiness.
-3. **FIRE Path Planner**
-   A proprietary algorithm that visualizes Net Worth growth (₹ Lakhs) over time, pinpointing the exact year you achieve Financial Independence.
-4. **AI Action Plan (Tax Wizard)**
-   Intelligently flags missing tax-saving tactics and critical insurance gaps based on user inputs.
+3. **FIRE Path Planner & Action Plan**
+   Visualizes Net Worth growth over time, pinpointing your exact retirement year, while intelligently flagging missing tax-saving tactics (e.g., NPS 80CCD).
+4. **Predictive Cash Flow Forecaster** *(NEW AI)*
+   An algorithmic model that forecasts future balances based on recurring bills and generates a real-time "Safe to Spend" daily limit.
+5. **Investment AI & Robo-Tax Harvester** *(NEW AI)*
+   Simulates real-time market sentiment (via NLP/FinBERT) and automatically identifies unrealized tax-loss opportunities in your portfolio to offset capital gains.
+6. **Conversational AI Voice Mentor** *(NEW AI)*
+   A 100% free, browser-native voice assistant utilizing Web Speech API enabling users to log expenses and check balances hands-free.
+7. **Document & Contract Summarizer** *(NEW AI)*
+   An LLM-simulated tool that instantly scans dense financial agreements (like credit card T&Cs) to expose hidden "Gotchas" and highlight key benefits.
 
 ---
 

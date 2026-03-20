@@ -21,14 +21,18 @@
 * **What to say:** "Once onboarded, the user is instantly dropped into their personalized Wellness Dashboard. Instead of staring at boring spreadsheets, the AI maps their health across 6 exact dimensions: Emergency Funds, Insurance, Debt Health, Taxation, and Investments."
 * **What to do:** Hover over the Recharts visuals. Show the interactivity of the dashboard. Show how the visual components make complex data easy to digest.
 
-## ⏱ 2:00 - 2:30 | The "Secret Sauce" (FIRE Planner & Tax Wizard)
-*Camera: Scroll to the `FIRE Path Planner` and `Tax Wizard` sections.*
-* **What to say:** "Here is where the AI Mentor shines. Our FIRE planner runs a proprietary algorithm visualizing the exact year this user can retire early based on their specific net-worth trajectory. Furthermore, our Action Plan wizard intelligently flags missing tactics—like maximizing Section 80CCD(1B) for NPS—saving them real money immediately."
-* **What to do:** Highlight the line chart predicting their retirement year, and point directly to the actionable AI tax advice on the screen.
+## ⏱ 2:00 - 2:40 | The AI "Secret Sauce" (Forecaster & Voice Mentor)
+*Camera: Scroll to the `Cash Flow Forecaster`, `Investment AI`, and `Contract Summarizer` sections.*
+* **What to say:** "Here is where the AI Mentor unleashes its power. Our Predictive Forecaster tracks historical habits to calculate a daily 'Safe-to-Spend' limit. We've also integrated an AI Sentiment analyzer scanning live financial news, plus a Robo-Tax Harvester finding immediate tax-loss opportunities in your portfolio."
+* **What to do:** Point to the area chart predicting dropping balances, and quickly point out the bullish sentiment score.
 
-## ⏱ 2:30 - 2:45 | Architecture & Wrap Up
+*Camera: Click the glowing `Voice Assistant` microphone and scroll to `Contract Summarizer`.*
+* **What to say:** "But we didn't stop there. Users can talk directly to their dashboard hands-free—like asking 'Mentor, how much can I spend today?'. And for those terrible 20-page credit card terms? Just paste them into our Contract Summarizer to instantly expose the hidden 'Gotchas'."
+* **What to do:** Click the mic to turn it red and show the Transcription popup. Quickly paste dummy text into the summarizer to show the red/green alerts pop up.
+
+## ⏱ 2:40 - 2:55 | Architecture & Wrap Up
 *Camera: Briefly show the `System Architecture Diagram` or the `README.md`, then back to the Dashboard.*
-* **What to say:** "Our prototype is built on a highly scalable Next.js 14 architecture with client-side state, fully primed to integrate with external LLMs and cloud databases in the future. We are AI Money Mentor, and we're democratizing financial freedom. Thank you!"
+* **What to say:** "Our prototype is built on a highly scalable Next.js 14 architecture with client-side state, utilizing embedded Web Speech APIs and predictive math models representing 100% free, localized AI. We are AI Money Mentor, and we're democratizing financial freedom. Thank you!"
 
 ---
 
