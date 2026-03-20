@@ -1,0 +1,30 @@
+%% System Architecture for AI Money Mentor
+graph TD
+    classDef default fill:#1e1e2f,stroke:#4a4a6a,color:#fff;
+    classDef future fill:#0a0a1a,stroke:#33334d,stroke-dasharray: 5 5,color:#aaa;
+
+    User([👤 User]) -->|Interacts| NextJS[Next.js 14 App Router]
+
+    subgraph "Frontend Layer (Client UI)"
+        NextJS --> Hero[Hero / Landing Page]
+        NextJS --> Onboarding[Onboarding Form \n Health Score Mapper]
+        NextJS --> Dashboard[FIRE Wellness Dashboard \n 6 Dimensions]
+        
+        Dashboard --> Charts[Recharts \n Visualizations]
+        Dashboard --> Icons[Lucide React Icons]
+    end
+
+    subgraph "Core Logic & State Management"
+        Onboarding -->|Captures Profile| State[(Client-side State)]
+        State -->|Feeds Data| Dashboard
+        State -->|Triggers| Algorithms[Financial Algorithms \n FIRE Planner, Tax Wizard]
+        Algorithms -->|Results| State
+    end
+
+    subgraph "Future Integration Layer (Backend / AI)"
+        Algorithms -.->|REST / API| API[Next.js API Routes]
+        API -.->|Prompts / Context| LLM{AI Models \n Mentor Engine}
+        API -.->|Persists| DB[(Database \n User Profiles)]
+    end
+
+    class API,LLM,DB future;
