@@ -1,42 +1,77 @@
-# 🎥 AI Money Mentor: Video Demo Script & Flow
+# 🎥 AI Money Mentor: Demo Script (Phase 2 — Agentic Architecture)
 
-**Duration:** 2 to 3 minutes
-**Tools suggested:** Loom, OBS, or built-in screen recording. 
-
----
-
-## ⏱ 0:00 - 0:30 | The Hook & The Problem
-*Camera: Show your face (if comfortable) or start directly on the `Hero / Landing Page`.*
-* **What to say:** "Hi judges! Did you know 95% of Indians lack a formal financial plan? Elite wealth management is restricted to the top 1%. Today, we’re changing that with **AI Money Mentor**—turning confused savers into confident investors."
-* **What to do:** Briefly scroll the beautiful landing page. Point out that the tool replaces expensive financial advisors with a fast, frictionless AI interface.
-
-## ⏱ 0:30 - 1:15 | The "Aha!" Moment (Onboarding & Health Score)
-*Camera: Screen recording the `Onboarding Form`.*
-* **What to say:** "Let’s see it in action. Traditional financial planning takes weeks of meetings. Our AI maps your entire financial life in just 5 minutes. As a user inputs their income, debt, and risk profile, the system calculates their foundation."
-* **What to do:** Rapidly walk through the multi-step form. 
-* *Pro Tip:* Don't explain every single form field. Just type in realistic numbers quickly (e.g., ₹15L income, ₹3L debt) to show how fluid the UI is. 
-
-## ⏱ 1:15 - 2:00 | The Core Value (FIRE Dashboard & 6 Dimensions)
-*Camera: Screen recording the `FIRE Wellness Dashboard`.*
-* **What to say:** "Once onboarded, the user is instantly dropped into their personalized Wellness Dashboard. Instead of staring at boring spreadsheets, the AI maps their health across 6 exact dimensions: Emergency Funds, Insurance, Debt Health, Taxation, and Investments."
-* **What to do:** Hover over the Recharts visuals. Show the interactivity of the dashboard. Show how the visual components make complex data easy to digest.
-
-## ⏱ 2:00 - 2:40 | The AI "Secret Sauce" (Forecaster & Voice Mentor)
-*Camera: Scroll to the `Cash Flow Forecaster`, `Investment AI`, and `Contract Summarizer` sections.*
-* **What to say:** "Here is where the AI Mentor unleashes its power. Our Predictive Forecaster tracks historical habits to calculate a daily 'Safe-to-Spend' limit. We've also integrated an AI Sentiment analyzer scanning live financial news, plus a Robo-Tax Harvester finding immediate tax-loss opportunities in your portfolio."
-* **What to do:** Point to the area chart predicting dropping balances, and quickly point out the bullish sentiment score.
-
-*Camera: Click the glowing `Voice Assistant` microphone and scroll to `Contract Summarizer`.*
-* **What to say:** "But we didn't stop there. Users can talk directly to their dashboard hands-free—like asking 'Mentor, how much can I spend today?'. And for those terrible 20-page credit card terms? Just paste them into our Contract Summarizer to instantly expose the hidden 'Gotchas'."
-* **What to do:** Click the mic to turn it red and show the Transcription popup. Quickly paste dummy text into the summarizer to show the red/green alerts pop up.
-
-## ⏱ 2:40 - 2:55 | Architecture & Wrap Up
-*Camera: Briefly show the `System Architecture Diagram` or the `README.md`, then back to the Dashboard.*
-* **What to say:** "Our prototype is built on a highly scalable Next.js 14 architecture with client-side state, utilizing embedded Web Speech APIs and predictive math models representing 100% free, localized AI. We are AI Money Mentor, and we're democratizing financial freedom. Thank you!"
+**Duration:** 2–3 minutes  
+**Tools suggested:** Loom, OBS, or screen recording  
+**URL:** `localhost:3000` (auto-redirects to `/mentor`)
 
 ---
 
-### 💡 Quick Tips for the Recording:
-1. **Pace Yourself:** Don't speak too fast, but keep the energy high.
-2. **Pre-fill Data:** If your form takes time to fill out, consider having a tab open where it’s already 90% filled out so you don't spend 40 seconds just typing numbers.
-3. **Hide Clutter:** Close unnecessary browser tabs and hide your bookmarks bar for a clean, professional look!
+## ⏱ 0:00 – 0:20 | Hook & Problem Statement
+*Screen: Show the AI Money Mentor chat interface loading.*
+
+> "Hi judges! 95% of Indians have no formal financial plan. Elite advisors cost lakhs per year. We built **AI Money Mentor** — a fully agentic AI system that replaces your financial advisor. No forms. No dashboards. Just talk to it."
+
+---
+
+## ⏱ 0:20 – 1:00 | Demo 1: FIRE Path Planner
+
+*Type into the chat:*
+> `"I am 28 years old. I earn ₹1.5 Lakhs per month and spend ₹60,000. I want to retire at 45. Give me my FIRE plan."`
+
+**What to say while it loads:**
+> "Watch the agent autonomously extract my age, income, and retirement target — then invoke its internal FIRE Calculator. It runs real compound interest math, not hallucinated text."
+
+**When the output renders:**
+> "The agent returned: my target FIRE corpus, required monthly SIP, emergency fund target, asset allocation, insurance gap, and tax-saving moves — all computed mathematically. This is an agentic tool call, not a chatbot making things up."
+
+---
+
+## ⏱ 1:00 – 1:40 | Demo 2: Tax Wizard (Edge Case Scenario)
+
+*Click Reset Chat, then type:*
+> `"I earn ₹15 Lakhs annually. I invest ₹1.5 Lakhs in ELSS and pay ₹50,000 for health insurance. Should I choose Old or New Tax Regime?"`
+
+**What to say:**
+> "This is the edge case the judges asked for — a user who has deductions in the Old Regime but might still benefit from the simplified New Regime. The agent autonomously routes to the Tax Wizard tool."
+
+**When the 2-column grid renders:**
+> "The Wizard computed both regime tax liabilities mathematically using the correct 2024–25 Indian slabs, modelled 80C, 80D, standard deduction, and declared a mathematical winner — the New Regime saves ₹1.11 Lakhs here. This is real math, not AI guesswork."
+
+---
+
+## ⏱ 1:40 – 2:20 | Demo 3: Money Health Score
+
+*Click Reset Chat, then type:*
+> `"I earn ₹1 Lakh/month. Expenses ₹50K. Savings ₹3 Lakhs. EMI ₹25K. I invest ₹10K/month. Term insurance ₹50 Lakhs. What's my Money Health Score?"`
+
+**What to say:**
+> "Now the agent evaluates the user's full financial wellness across 6 dimensions in a single pass. It identifies that the emergency fund is strong, but insurance coverage is dangerously low at only 42/100."
+
+**When the 6-bar grid renders:**
+> "Every bar represents a specific financial pillar — scored against verified Indian benchmarks. The overall score of 74 tells the user they're stable, but underinsured. The agent has effectively done what a CFP would charge ₹10,000 to produce."
+
+---
+
+## ⏱ 2:20 – 2:50 | Architecture & Compliance
+
+*Briefly show the architecture diagram.*
+
+> "The system runs on a Supervisor-Agent pattern. Gemini Flash acts as the orchestration brain. It routes each user intent to a specialized mathematical tool — the FIRE Planner, Tax Wizard, or Health Score Engine — that runs deterministic algorithms. The output flows back as a structured JSON that renders beautifully in the React UI via the Vercel AI SDK."
+
+> "Critically, all responses carry a hardcoded **SEBI disclaimer** in the footer — clearly marking this as AI guidance, not licensed financial advice. That's our regulatory compliance guardrail."
+
+---
+
+## ⏱ 2:50 – 3:00 | Close
+
+> "AI Money Mentor: an agentic, multi-tool financial advisor for every Indian. Built on Next.js 16, Vercel AI SDK 6, and Gemini Flash. Thank you."
+
+---
+
+### 💡 Pre-Recording Checklist
+- [ ] Server running: `npm run dev` at `localhost:3000`
+- [ ] API key in `.env.local` is valid and has quota  
+- [ ] Close all browser tabs except `localhost:3000`
+- [ ] Hide bookmarks bar (press `Ctrl+Shift+B`)
+- [ ] Pre-type prompts in Notepad to paste quickly
+- [ ] Reset Chat before each new demo scenario

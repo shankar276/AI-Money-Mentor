@@ -1,83 +1,120 @@
 # AI Money Mentor 🇮🇳💡
 
-> **95% of Indians don't have a financial plan. AI Money Mentor makes elite financial planning as accessible as checking WhatsApp.**
+> **95% of Indians don't have a financial plan. AI Money Mentor gives every Indian access to elite-level financial intelligence — through a conversational AI agent.**
 
-**AI Money Mentor** is an AI-powered personal finance advisor designed to turn confused savers into confident investors. Built for this hackathon, our functional prototype delivers a seamless advisory experience to assess, plan, and optimize financial health.
+**Live Project URL:** [https://ai-money-mentor-275674809491.asia-south1.run.app](https://ai-money-mentor-275674809491.asia-south1.run.app)
+
+**AI Money Mentor** is a fully agentic AI financial advisor built on a Supervisor-Worker architecture. Users simply talk to the agent in plain language — the system autonomously routes, calculates, and returns structured, actionable financial plans. No forms. No dashboards. Just intelligence.
 
 ---
 
 ## 🎯 The Problem
-In India, elite wealth management is restricted to the top 1%. The average earner relies on fragmented advice, confusing tax laws, and generic mutual fund portals, leading to:
-- Missing out on critical tax-saving opportunities (e.g., Section 80CCD(1B)).
-- Inadequate emergency and insurance coverage.
-- Lack of clarity on when they can achieve Financial Independence and Retire Early (FIRE).
 
-## 💡 Our Solution
-An intelligent, proactive mentor that understands your complete financial picture. By simply answering a 5-minute interactive onboarding questionnaire, the app maps your financial health across six dimensions and generates a highly personalized roadmap to early retirement.
+In India, elite financial advisory is restricted to the top 1%. The average earner faces:
+- Confusion between Old vs New tax regimes (leaving lakhs of savings on the table)
+- No emergency fund benchmarking or insurance gap awareness
+- Zero visibility into when they can achieve Financial Independence (FIRE)
+
+## 💡 Our Solution: An Agentic Financial Mentor
+
+The AI Money Mentor uses a **Supervisor-Agent pattern** powered by Google Gemini. It:
+1. Interprets natural language financial queries
+2. Autonomously routes to the right mathematical tool
+3. Returns structured, personalized, regulation-aware advice in seconds
 
 ---
 
-## 🚀 Key Features Built
+## 🚀 Key Features (Phase 2 — Fully Agentic)
 
-1. **Money Health Score Onboarding**
-   A fast, frictionless 5-minute flow that maps your current net worth, income, debt, and risk profile.
-2. **Comprehensive Wellness Dashboard**
-   Displays your financial health across 6 critical dimensions: Emergency Fund, Insurance Coverage, Debt Health, Investments, Tax Efficiency, and Retirement Readiness.
-3. **FIRE Path Planner & Action Plan**
-   Visualizes Net Worth growth over time, pinpointing your exact retirement year, while intelligently flagging missing tax-saving tactics (e.g., NPS 80CCD).
-4. **Predictive Cash Flow Forecaster** *(NEW AI)*
-   An algorithmic model that forecasts future balances based on recurring bills and generates a real-time "Safe to Spend" daily limit.
-5. **Investment AI & Robo-Tax Harvester** *(NEW AI)*
-   Simulates real-time market sentiment (via NLP/FinBERT) and automatically identifies unrealized tax-loss opportunities in your portfolio to offset capital gains.
-6. **Conversational AI Voice Mentor** *(NEW AI)*
-   A 100% free, browser-native voice assistant utilizing Web Speech API enabling users to log expenses and check balances hands-free.
-7. **Document & Contract Summarizer** *(NEW AI)*
-   An LLM-simulated tool that instantly scans dense financial agreements (like credit card T&Cs) to expose hidden "Gotchas" and highlight key benefits.
+### 1. 🔥 FIRE Path Planner
+Tell the agent your age, income, expenses, and retirement goal. It autonomously calculates:
+- Target FIRE corpus using compound interest math
+- Required monthly SIP
+- Emergency fund target (6× expenses)
+- Asset allocation (Rule of 100 − Age)
+- Insurance gap (term life + health)
+- Top 3 tax-saving moves
+
+### 2. 🧾 Tax Wizard (Old vs New Regime)
+Tell the agent your salary, 80C investments, and insurance premiums. It:
+- Models both regimes mathematically using 2024–25 Indian tax slabs
+- Applies standard deduction, 80C, 80D, 24B, and 87A rebate
+- Declares a **Mathematical Winner** with exact rupee savings
+- Handles the edge case: users with high deductions who still benefit from the New Regime
+
+### 3. 💯 Money Health Score
+Tell the agent your income, savings, EMI, and insurance. It evaluates your financial wellness across **6 dimensions**:
+| Dimension | Target Benchmark |
+|---|---|
+| Emergency Fund | 6× Monthly Expenses |
+| Insurance Cover | 10× Annual Income |
+| Debt Health | EMI < 30% of Income |
+| Savings Rate | > 20% of Income |
+| Tax Efficiency | Max 80C Deductions (₹1.5L/yr) |
+| Retirement Path | Derived from Savings + Debt Score |
+
+Returns a 0–100 overall score with a 6-bar progress grid.
+
+---
+
+## ⚖️ Regulatory Compliance
+
+All responses carry a **hardcoded SEBI disclaimer** distinguishing AI-generated mathematical guidance from licensed financial advisory — satisfying the hackathon's regulatory compliance requirement.
 
 ---
 
 ## 🏗 System Architecture
 
-We have architected the system to be highly scalable, bridging an intuitive frontend with future AI/LLM integrations.
-- **[View System Architecture Diagram (PDF)](./system_architecture.pdf)**
-- **[View System Architecture Diagram (PNG)](./system_architecture.png)**
+- **[System Architecture Diagram (PDF)](./system_architecture.pdf)**
+- **[System Architecture Diagram (PNG)](./system_architecture.png)**
+- **[Mermaid Source](./architecture.mmd)**
+
+```
+User → ChatInterface (useChat) → /api/chat (Next.js)
+  → agent.ts (Supervisor, Gemini Flash)
+    → fire_planner.ts | tax_wizard.ts | health_score.ts
+  → Structured JSON → Rendered UI Cards
+```
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Framework**: Next.js 14 App Router (React)
-- **Styling**: Vanilla CSS (Premium Glassmorphism + Neon Space Dark Mode)
-- **Visualizations**: Recharts
-- **Icons**: Lucide React
-- **Architecture**: Client-side State + Static Visualizations (Prepared for robust LLM/API integration in the future)
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| AI SDK | Vercel AI SDK v6 (`ai`, `@ai-sdk/react`) |
+| LLM | Google Gemini Flash (`@ai-sdk/google`) |
+| Schema | Zod |
+| Styling | Vanilla CSS (Glassmorphism dark mode) |
+| Tests | Playwright |
 
 ---
 
-## 🏃‍♂️ Running the Project Locally
+## 🏃 Running Locally
 
-1. Clone this repository.
-2. Install dependencies:
-   ```bash
-   npm install --legacy-peer-deps
-   ```
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+See **[deployment_steps.md](./deployment_steps.md)** for full setup instructions.
 
-> **Testing Flow**: Click "Get Your Health Score" on the Hero Page. Complete the multi-step form to let the mentor calculate your metrics. You will be redirected to the interactive FIRE Dashboard showing your personalized roadmap.
+**Quick start:**
+```bash
+npm install
+# Create .env.local with: GOOGLE_GENERATIVE_AI_API_KEY=your_key
+npm run dev
+# Open http://localhost:3000
+```
 
 ---
 
 ## 📁 Hackathon Submission Checklist
 
-- [x] **System Architecture Diagram**: Located in the repo (`system_architecture.pdf` & `system_architecture.png`).
-- [x] **Functional Prototype**: Codebase provided here, flawlessly executed via Next.js.
-- [x] **Public GitHub Repository**: (You are here!)
-- [ ] **Demo Video**: [Link to 2-3 min Demo Video] *(Reminder: Add your video link here!)*
-- [x] **README/Documentation**: Comprehensive judging documentation provided.
+- [x] **System Architecture Diagram** — `system_architecture.pdf` & `.png`
+- [x] **Functional Prototype** — 3 working agentic tools (FIRE, Tax, Health Score)
+- [x] **SEBI Compliance Guardrail** — Hardcoded disclaimer in UI
+- [x] **Edge Case Handled** — Old vs New regime with deduction-heavy user profile
+- [x] **README/Documentation** — This file
+- [x] **Integration Tests** — Playwright tests in `tests/integration.spec.ts`
+- [ ] **Demo Video** — *[Add your Loom/YouTube link here]*
 
 ---
-*Built with ❤️ for the AI Money Mentor Hackathon*
+
+*Built with ❤️ for the AI Money Mentor Hackathon — Track 9*
